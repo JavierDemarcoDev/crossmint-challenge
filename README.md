@@ -52,7 +52,3 @@ class AstralUoW {
   // Methods to interact with services and create astral objects
 }
 ```
-
-## Conclusion
-
-The solution effectively automates the process of creating a megaverse by interacting with the provided API. It demonstrates the use of TypeScript, design patterns, and proper abstraction to model the problem and achieve the desired outcome.

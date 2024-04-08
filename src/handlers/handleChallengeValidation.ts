@@ -7,12 +7,9 @@ export async function handleChallengeValidation(
   event: EventEmitter,
   init: Function
 ) {
-  event.on("finish", async () => {
-    const astralUoW = new AstralUoW();
+  const astralUoW = new AstralUoW();
 
-    await timeOut(1000);
+  await timeOut(1000);
 
-    await astralUoW.goalMapRequest(AstralBodyMethods.CHECK, event, init);
-    return event;
-  });
+  await astralUoW.goalMapRequest(AstralBodyMethods.CHECK, event, init);
 }

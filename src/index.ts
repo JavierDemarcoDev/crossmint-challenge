@@ -10,8 +10,13 @@ let programStarts = false;
   const event: EventEmitter = new EventEmitter();
 
   // Checking after running first the handle goalMap creator
-  if (programStarts) await handleChallengeValidation(event, init);
-  else console.log("STARTING PROGRAM");
+  event.on("finish", async () => {
+    if (programStarts) {
+      await handleChallengeValidation(event, init);
+    } else console.log("STARTING PROGRAM");
+
+    return;
+  });
 
   programStarts = true;
 
